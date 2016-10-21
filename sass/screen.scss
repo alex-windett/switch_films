@@ -1,0 +1,62 @@
+/* Welcome to Compass.
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+.logo {
+  display: block;
+  margin: 0 auto -200px;
+  position: relative;
+  z-index: 99999999;
+}
+
+// ****************************************
+// Sections
+// ****************************************
+.section {
+  position: relative;
+  min-height: 100vh;
+
+  &__half {
+    display: inline-block;
+    float: left;
+    width: 50%;
+  }
+
+  &__color {
+
+    &--blue {
+      background: blue;
+    }
+
+    &--red {
+      background: red;
+    }
+  }
+}
+
+// ****************************************
+// CTA / Buttons
+// ****************************************
+.button {
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 18px;
+  background: white;
+  border: none;
+  padding: 10px 20px;
+
+  &__centeral {
+    left: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// .button:hover {
+//   transform: scale(1.2);
+//   transition: all 0.5s ease;
+// }
