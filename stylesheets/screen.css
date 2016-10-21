@@ -1,9 +1,9 @@
 /* line 2, ../sass/screen.scss */
 .centeralised, .logo {
-  left: 40%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  text-align: center;
 }
 
 /* line 9, ../sass/screen.scss */
