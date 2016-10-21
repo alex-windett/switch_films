@@ -1,21 +1,25 @@
-/* Welcome to Compass.
-* In this file you should write your main styles. (or centralize your imports)
-* Import this file using the following HTML or equivalent:
-* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+.centeralised {
+  left: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .logo {
   display: block;
   margin: 0 auto -200px;
-  position: relative;
   z-index: 99999999;
+
+  @extend .centeralised;
+  left: 45%;
 }
 
 .main {
-  background: url('../images/home-background.png') no-repeat;
+  background: url('../images/home-background.jpeg') no-repeat;
   background-size: cover;
   background-position: bottom right;
+  max-width: none;
   width: 100vw;
   height: 100vh;
 }
@@ -33,16 +37,6 @@
     width: 50%;
   }
 
-  &__color {
-
-    &--blue {
-      // background: blue;
-    }
-
-    &--red {
-      // background: red;
-    }
-  }
 }
 
 // ****************************************
@@ -55,15 +49,35 @@
   background: white;
   border: none;
   padding: 10px 20px;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
 
   &__isClicked {
-    display: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease 0.25s;
   }
 }
 
-.centeralised {
-  left: 40%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+// ****************************************
+// Articles
+// ****************************************
+.article {
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease 0.25s;
+
+
+  &__isVisible {
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+}
+
+
+// ****************************************
+// Helpers
+// ****************************************
+.text-center {
+  text-align: center;
 }

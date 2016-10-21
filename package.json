@@ -1,0 +1,14 @@
+{
+  "name": "switch_films",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:alex-windett/switch_films.git",
+    "type": "git"
+  },
+  "author": "Alex Windett <alex@bigfish.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "vimeo": "^1.2.0"
+  }
+}
