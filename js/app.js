@@ -5,6 +5,4 @@ $(document).ready(function() {
         $(this).find('.button').toggleClass('button__isClicked');
         $(this).find('.article').toggleClass('article__isVisible');
     })
-
-    $('get')
 })

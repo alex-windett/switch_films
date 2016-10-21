@@ -51,9 +51,11 @@
   padding: 10px 20px;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
+  height: auto;
 
   &__isClicked {
     overflow: hidden;
+    height: 0;
     opacity: 0;
     transition: all 0.5s ease 0.25s;
   }
@@ -65,10 +67,12 @@
 .article {
   overflow: hidden;
   opacity: 0;
+  height: 0;
   transition: all 0.5s ease 0.25s;
 
 
   &__isVisible {
+    height: auto;
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
   }
@@ -80,4 +84,20 @@
 // ****************************************
 .text-center {
   text-align: center;
+}
+
+
+// ****************************************
+// Links
+// ****************************************
+
+// Foundation Overrides
+a,
+button {
+  background-color: transparent !important;
+  color: inherit !important;
+  outline: none;
+  &:hover {
+    background-color: transparent !important;
+  }
 }

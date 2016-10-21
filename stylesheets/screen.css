@@ -46,27 +46,44 @@
   padding: 10px 20px;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
+  height: auto;
 }
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .button__isClicked {
   overflow: hidden;
+  height: 0;
   opacity: 0;
   transition: all 0.5s ease 0.25s;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .article {
   overflow: hidden;
   opacity: 0;
+  height: 0;
   transition: all 0.5s ease 0.25s;
 }
-/* line 71, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .article__isVisible {
+  height: auto;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .text-center {
   text-align: center;
+}
+
+/* line 95, ../sass/screen.scss */
+a,
+button {
+  background-color: transparent !important;
+  color: inherit !important;
+  outline: none;
+}
+/* line 100, ../sass/screen.scss */
+a:hover,
+button:hover {
+  background-color: transparent !important;
 }
