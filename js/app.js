@@ -1,7 +1,5 @@
-// $(".section").click(function(evt) {
-//    $(this).zoomTo({
-//        targetsize: 2,
-//        duration:600
-//    });
-//    evt.stopPropagation();
-// });
+$(document).ready( function () {
+    $('.section').click( function() {
+        $(this).find('.button').toggleClass('button__isClicked')
+    })
+})
