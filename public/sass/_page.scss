@@ -80,9 +80,9 @@
 // Articles
 // ****************************************
 .article {
-  overflow: hidden;
-  opacity: 0;
-  height: 0;
+  // overflow: hidden;
+  // opacity: 0;
+  // height: 0;
   transition: all 0.5s ease 0.25s;
 
 
@@ -91,4 +91,36 @@
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
   }
+}
+
+
+// ****************************************
+// Tabs
+// ****************************************
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul.tabs li{
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+ul.tabs li.current{
+  background: #ededed;
+  color: #222;
+}
+
+.tab-content{
+  display: none;
+  background: #ededed;
+  padding: 15px;
+}
+
+.tab-content.current{
+  display: inherit;
 }
