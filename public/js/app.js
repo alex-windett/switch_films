@@ -24,9 +24,10 @@ $(document).ready(function() {
 
     const appendVideosToGrid = function(data) {
         data.forEach( function(video, index) {
-            console.log(video, 'index ' + index)
-            const embedHTML = '<div class="image__wrapper column">' + video.embed.html + '</div>';
+            const i = 5;
+            const embedHTML = '<div class="image__wrapper column"><div class="iframe">' + video.embed.html + '</div></div>';
             $('.video-row').append(embedHTML);
+            $('.primary-video').append(embedHTML);
         } )
     }
 

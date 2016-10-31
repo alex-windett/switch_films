@@ -1,16 +1,6 @@
-@mixin centeralised() {
-  text-align: center;
-
-  @media #{$medium-up} {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-.centeralised {
-  @include centeralised();
-}
+@import "util";
+@import "tabs";
+@import "iframe";
 
 .logo {
   display: block;
@@ -93,41 +83,14 @@
   }
 }
 
-
 // ****************************************
-// Tabs
+// Videos
 // ****************************************
-ul.tabs{
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-ul.tabs li{
-  background: none;
-  color: #222;
-  display: inline-block;
-  padding: 10px 15px;
-  cursor: pointer;
-}
+.primary-video {
+    padding: 0;
+    margin-bottom: 20px;
 
-ul.tabs li.current{
-  background: #ededed;
-  color: #222;
-}
-
-.tab-content{
-  display: none;
-  background: #ededed;
-  padding: 15px;
-}
-
-.tab-content.current{
-  display: inherit;
-}
-
-// ****************************************
-// IFRAME
-// ****************************************
-iframe {
-    max-width: 100%;
+    & > .column {
+        padding: 0;
+    }
 }

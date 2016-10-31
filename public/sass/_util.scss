@@ -1,0 +1,13 @@
+@mixin centeralised() {
+  text-align: center;
+
+  @media #{$medium-up} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.centeralised {
+  @include centeralised();
+}
