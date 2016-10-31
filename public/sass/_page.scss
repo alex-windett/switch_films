@@ -124,3 +124,10 @@ ul.tabs li.current{
 .tab-content.current{
   display: inherit;
 }
+
+// ****************************************
+// IFRAME
+// ****************************************
+iframe {
+    max-width: 100%;
+}
