@@ -1,10 +1,7 @@
 
 $(document).ready(function() {
-    const vimeoAPI = {
-        getVideos: 'https://api.vimeo.com/me/videos?access_token=42315fec2bf964ec800311df5f221383'
-    }
-
-    // VIMEO API ENDPOINT = api.vimeo.com/me/videos?access_token=42315fec2bf964ec800311df5f221383
+    const getVideos = 'https://api.vimeo.com/me/videos?access_token=95f772dfe9154c5946fd77421662d46c';
+    const getEmbeddableVideos = getVideos + '&filter=embeddable&filter_embeddable=true';
 
     $('.section').click(function() {
         $('body').toggleClass('isZoomed')
@@ -24,14 +21,19 @@ $(document).ready(function() {
 
     const appendVideosToGrid = function(data) {
         data.forEach( function(video, index) {
-            const i = 5;
             const embedHTML = '<div class="image__wrapper column"><div class="iframe">' + video.embed.html + '</div></div>';
-            $('.video-row').append(embedHTML);
-            $('.primary-video').append(embedHTML);
+
+            if ( index === 0) {
+              $('.primary-video').append(embedHTML);
+            }
+
+            if ( index >=1 && index <= 4) {
+              $('.video-row').append(embedHTML);
+            }
         } )
     }
 
-    $.get(vimeoAPI.getVideos)
+    $.get(getEmbeddableVideos)
         .done(function(data) {
             // console.log(data, ' done')
             appendVideosToGrid(data.data);
