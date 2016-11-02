@@ -4,16 +4,17 @@
 
 .logo {
   display: block;
-  margin: 0 auto -200px;
   z-index: 99999999;
+  margin: 0 auto 20px;
 
   @media #{$medium-up} {
     @include centeralised();
+    margin: 0 auto -200px;
     left: 45%;
   }
 }
 
-.main {
+body {
   background: url('../images/home-background.jpeg') no-repeat;
   background-size: cover;
   background-position: bottom right;

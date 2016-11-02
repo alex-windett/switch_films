@@ -65,13 +65,14 @@ ul.tabs li.current {
 /* line 5, ../sass/_page.scss */
 .logo {
   display: block;
-  margin: 0 auto -200px;
   z-index: 99999999;
+  margin: 0 auto 20px;
 }
 @media only screen and (min-width: 45.71429em) {
   /* line 5, ../sass/_page.scss */
   .logo {
     text-align: center;
+    margin: 0 auto -200px;
     left: 45%;
   }
 }
@@ -84,8 +85,8 @@ ul.tabs li.current {
   }
 }
 
-/* line 16, ../sass/_page.scss */
-.main {
+/* line 17, ../sass/_page.scss */
+body {
   background: url("../images/home-background.jpeg") no-repeat;
   background-size: cover;
   background-position: bottom right;
@@ -95,26 +96,26 @@ ul.tabs li.current {
 }
 
 @media only screen and (max-width: 45.71429em) {
-  /* line 28, ../sass/_page.scss */
+  /* line 29, ../sass/_page.scss */
   .section {
     height: 50vh;
   }
 }
 @media only screen and (min-width: 45.71429em) {
-  /* line 28, ../sass/_page.scss */
+  /* line 29, ../sass/_page.scss */
   .section {
     position: relative;
     min-height: 100vh;
   }
 }
-/* line 39, ../sass/_page.scss */
+/* line 40, ../sass/_page.scss */
 .section__half {
   display: inline-block;
   float: left;
   width: 50%;
 }
 
-/* line 50, ../sass/_page.scss */
+/* line 51, ../sass/_page.scss */
 .button {
   border-radius: 2px;
   font-size: 16px;
@@ -126,7 +127,7 @@ ul.tabs li.current {
   transition: visibility 0s, opacity 0.5s linear;
   height: auto;
 }
-/* line 61, ../sass/_page.scss */
+/* line 62, ../sass/_page.scss */
 .button__isClicked {
   overflow: hidden;
   height: 0;
@@ -134,26 +135,26 @@ ul.tabs li.current {
   transition: all 0.5s ease 0.25s;
 }
 
-/* line 72, ../sass/_page.scss */
+/* line 73, ../sass/_page.scss */
 .article {
   overflow: hidden;
   opacity: 0;
   height: 0;
   transition: all 0.5s ease 0.25s;
 }
-/* line 79, ../sass/_page.scss */
+/* line 80, ../sass/_page.scss */
 .article__isVisible {
   height: auto;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-/* line 89, ../sass/_page.scss */
+/* line 90, ../sass/_page.scss */
 .primary-video {
   padding: 0;
   margin-bottom: 20px;
 }
-/* line 93, ../sass/_page.scss */
+/* line 94, ../sass/_page.scss */
 .primary-video > .column {
   padding: 0;
 }
