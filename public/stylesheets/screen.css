@@ -1,0 +1,177 @@
+/* line 11, ../sass/_util.scss */
+.centeralised {
+  text-align: center;
+}
+@media only screen and (min-width: 45.71429em) {
+  /* line 11, ../sass/_util.scss */
+  .centeralised {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* line 4, ../sass/_tabs.scss */
+ul.tabs {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* line 10, ../sass/_tabs.scss */
+ul.tabs li {
+  background: transparent;
+  color: #000;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* line 18, ../sass/_tabs.scss */
+ul.tabs li.current {
+  background: #000;
+  color: #fff;
+}
+
+/* line 23, ../sass/_tabs.scss */
+.tab-content {
+  display: none;
+  padding: 15px;
+}
+
+/* line 28, ../sass/_tabs.scss */
+.tab-content.current {
+  display: inherit;
+}
+
+/* line 4, ../sass/_iframe.scss */
+.iframe {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+/* line 10, ../sass/_iframe.scss */
+.iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 5, ../sass/_page.scss */
+.logo {
+  display: block;
+  margin: 0 auto -200px;
+  z-index: 99999999;
+}
+@media only screen and (min-width: 45.71429em) {
+  /* line 5, ../sass/_page.scss */
+  .logo {
+    text-align: center;
+    left: 45%;
+  }
+}
+@media only screen and (min-width: 45.71429em) and (min-width: 45.71429em) {
+  /* line 5, ../sass/_page.scss */
+  .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* line 16, ../sass/_page.scss */
+.main {
+  background: url("../images/home-background.jpeg") no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  max-width: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 45.71429em) {
+  /* line 28, ../sass/_page.scss */
+  .section {
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 45.71429em) {
+  /* line 28, ../sass/_page.scss */
+  .section {
+    position: relative;
+    min-height: 100vh;
+  }
+}
+/* line 39, ../sass/_page.scss */
+.section__half {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+/* line 50, ../sass/_page.scss */
+.button {
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 18px;
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+  height: auto;
+}
+/* line 61, ../sass/_page.scss */
+.button__isClicked {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s ease 0.25s;
+}
+
+/* line 72, ../sass/_page.scss */
+.article {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s ease 0.25s;
+}
+/* line 79, ../sass/_page.scss */
+.article__isVisible {
+  height: auto;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* line 89, ../sass/_page.scss */
+.primary-video {
+  padding: 0;
+  margin-bottom: 20px;
+}
+/* line 93, ../sass/_page.scss */
+.primary-video > .column {
+  padding: 0;
+}
+
+/* line 8, ../sass/screen.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 18, ../sass/screen.scss */
+a,
+button {
+  background-color: transparent !important;
+  color: inherit !important;
+  outline: none;
+}
+/* line 23, ../sass/screen.scss */
+a:hover,
+button:hover {
+  background-color: transparent !important;
+}
