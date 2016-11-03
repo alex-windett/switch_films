@@ -19,8 +19,18 @@ $(document).ready(function() {
 		$("#"+tab_id).addClass('current');
 	});
 
+  const hasTageName = function(tags, tagName) {
+    tags.filter( function(tagName) {
+      return tag.name === tagName
+    })
+  }
+
     const appendVideosToGrid = function(data) {
         data.forEach( function(video, index) {
+
+          if ( hasTageName(video.tags, 'showcase') ) {
+            debugger
+          }
             const embedHTML = '<div class="image__wrapper column"><div class="iframe">' + video.embed.html + '</div></div>';
 
             if ( index === 0) {
