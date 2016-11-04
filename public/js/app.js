@@ -14,8 +14,7 @@ $(document).ready(function() {
   // SET UP TAGS
   $('.tab-link').click(function(){
     var tab_id = $(this).attr('data-tab');
-
-    $('ul.tabs li').removeClass('current');
+    $(this).removeClass('current');
     $('.tab-content').removeClass('current');
 
     $(this).addClass('current');
@@ -52,4 +51,6 @@ $(document).ready(function() {
     .fail(function(data) {
       console.log(data, ' fail')
     })
+})
+  })
 })
