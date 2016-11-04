@@ -124,10 +124,11 @@ body {
   border: none;
   padding: 10px 20px;
   opacity: 1;
+  display: none;
   transition: visibility 0s, opacity 0.5s linear;
   height: auto;
 }
-/* line 62, ../sass/_page.scss */
+/* line 63, ../sass/_page.scss */
 .button__isClicked {
   overflow: hidden;
   height: 0;
@@ -135,26 +136,24 @@ body {
   transition: all 0.5s ease 0.25s;
 }
 
-/* line 73, ../sass/_page.scss */
+/* line 74, ../sass/_page.scss */
 .article {
-  overflow: hidden;
-  opacity: 0;
   height: 0;
   transition: all 0.5s ease 0.25s;
 }
-/* line 80, ../sass/_page.scss */
+/* line 81, ../sass/_page.scss */
 .article__isVisible {
   height: auto;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-/* line 90, ../sass/_page.scss */
+/* line 91, ../sass/_page.scss */
 .primary-video {
   padding: 0;
   margin-bottom: 20px;
 }
-/* line 94, ../sass/_page.scss */
+/* line 95, ../sass/_page.scss */
 .primary-video > .column {
   padding: 0;
 }

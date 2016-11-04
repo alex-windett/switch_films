@@ -56,6 +56,7 @@ body {
   border: none;
   padding: 10px 20px;
   opacity: 1;
+  display: none;
   transition: visibility 0s, opacity 0.5s linear;
   height: auto;
 
@@ -71,8 +72,8 @@ body {
 // Articles
 // ****************************************
 .article {
-  overflow: hidden;
-  opacity: 0;
+  // overflow: hidden;
+  // opacity: 0;
   height: 0;
   transition: all 0.5s ease 0.25s;
 

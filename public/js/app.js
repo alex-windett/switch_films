@@ -1,55 +1,55 @@
 
 $(document).ready(function() {
-    const getVideos = 'https://api.vimeo.com/me/videos?access_token=95f772dfe9154c5946fd77421662d46c';
-    const getEmbeddableVideos = getVideos + '&filter=embeddable&filter_embeddable=true';
+  // CONSTANTS
+  const getVideos = 'https://api.vimeo.com/me/videos?access_token=95f772dfe9154c5946fd77421662d46c';
+  const getEmbeddableVideos = getVideos + '&filter=embeddable&filter_embeddable=true';
+  const tagToFilterBy = 'marathon';
 
-    $('.section').click(function() {
-        $('body').toggleClass('isZoomed')
-        $(this).find('.button').toggleClass('button__isClicked');
-        $(this).find('.article').toggleClass('article__isVisible');
-    })
+  $('.section').click(function() {
+    $('body').toggleClass('isZoomed')
+    $(this).find('.button').toggleClass('button__isClicked');
+    $(this).find('.article').toggleClass('article__isVisible');
+  })
 
-    $('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
+  // SET UP TAGS
+  $('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
 
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
 
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	});
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  });
 
-  const hasTageName = function(tags, tagName) {
-    tags.filter( function(tagName) {
-      return tag.name === tagName
-    })
+  // GET VIMEO VIDEOS
+  const filterByTagName = function(obj) {
+    obj.name == tagToFilterBy ? true : false
   }
 
-    const appendVideosToGrid = function(data) {
-        data.forEach( function(video, index) {
+  const appendVideosToGrid = function(data) {
 
-          if ( hasTageName(video.tags, 'showcase') ) {
-            debugger
-          }
-            const embedHTML = '<div class="image__wrapper column"><div class="iframe">' + video.embed.html + '</div></div>';
+    data.forEach( (d, i) => {
+      if ( data[0].tags.filter(filterByTagName) ) {
+        const video = data[0];
+        const embedHTML = '<div class="image__wrapper column"><div class="iframe">' + video.embed.html + '</div></div>';
 
-            if ( index === 0) {
-              $('.primary-video').append(embedHTML);
-            }
+        if ( i === 0) {
+          $('.primary-video').append(embedHTML);
+        }
 
-            if ( index >=1 && index <= 4) {
-              $('.video-row').append(embedHTML);
-            }
-        } )
-    }
+        if ( i >=1 && i <= 4) {
+          $('.video-row').append(embedHTML);
+        }
+      }
+    });
+  }
 
-    $.get(getEmbeddableVideos)
-        .done(function(data) {
-            // console.log(data, ' done')
-            appendVideosToGrid(data.data);
-        })
-        .fail(function(data) {
-            console.log(data, ' fail')
-        })
-
+  $.get(getEmbeddableVideos)
+    .done(function(data) {
+      appendVideosToGrid(data.data);
+    })
+    .fail(function(data) {
+      console.log(data, ' fail')
+    })
 })
