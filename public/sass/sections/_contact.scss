@@ -5,6 +5,7 @@
 
   @media #{$medium-up} {
       width: 40%;
+      min-width: 260px;
   }
 
   li {
@@ -16,6 +17,6 @@
 
   [class^="icon-"] {
     font-size: 30px;
-    margin-right: 20px;
+    margin-right: 5%;
   }
 }

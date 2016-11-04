@@ -15,11 +15,12 @@ $image-path: '../images/';
   padding: 20px;
   list-style-type: none;
   text-align: left;
-  background: lightgrey;
+  background: #ececec;
 
   @media #{$medium-up} {
     display: flex;
     flex-wrap: wrap;
+    padding: 20px 10px 10px 30px;
   }
 
   &__item {
