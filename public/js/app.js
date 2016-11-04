@@ -14,11 +14,11 @@ $(document).ready(function() {
   // SET UP TAGS
   $('.tab-link').click(function(){
     var tab_id = $(this).attr('data-tab');
-    $(this).removeClass('current');
+    $('.tab-link').removeClass('current');
     $('.tab-content').removeClass('current');
 
     $(this).addClass('current');
-    $("#"+tab_id).addClass('current');
+    $("#" + tab_id).addClass('current');
   });
 
   // GET VIMEO VIDEOS
@@ -51,6 +51,4 @@ $(document).ready(function() {
     .fail(function(data) {
       console.log(data, ' fail')
     })
-})
-  })
 })
