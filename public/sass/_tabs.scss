@@ -1,0 +1,37 @@
+// ****************************************
+// Tabs
+// ****************************************
+ul.tabs{
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.tab-link {
+  background: white;
+  border: solid 2px black;
+  color: #000;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  &.current{
+    background: #000;
+    color: #fff;
+  }
+}
+
+.tab-content{
+  display: none;
+  padding: 15px;
+
+  &.current{
+    display: inherit;
+  }
+
+
+.about-us {
+  hyphens: auto;
+  word-break: break-all;
+  text-align: justify; 
+}

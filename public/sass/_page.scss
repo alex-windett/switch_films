@@ -4,7 +4,11 @@
 .logo {
   display: block;
   z-index: 99999999;
-  margin: 0 auto 20px;
+  margin: 30px auto 20px;
+}
+
+.row {
+ max-width: 100rem; 
 }
 
 body {
@@ -20,14 +24,14 @@ body {
 // Sections
 // ****************************************
 .section {
- 
+
   @media #{$small-only} {
     height: 50vh;
   }
 
   @media #{$medium-up} {
     position: relative;
-    min-height: 100vh;
+    // min-height: 100vh;
   }
 
   &__half {
