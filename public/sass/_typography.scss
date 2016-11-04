@@ -1,7 +1,7 @@
 // Generate @font-face declarations for a list of fonts
 
 // relative path to fonts
-$font-path: './fonts';
+$font-path: '../fonts/';
 
 // the name that will be used in font-family property
 // Add in 'fontello' when needed
@@ -42,6 +42,7 @@ $i: 1;
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
+	font-style: normal;
 
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
