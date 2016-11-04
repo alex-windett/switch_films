@@ -8,7 +8,7 @@
 }
 
 .row {
- max-width: 100rem; 
+ max-width: 100rem;
 }
 
 body {
@@ -25,13 +25,8 @@ body {
 // ****************************************
 .section {
 
-  @media #{$small-only} {
-    height: 50vh;
-  }
-
   @media #{$medium-up} {
     position: relative;
-    // min-height: 100vh;
   }
 
   &__half {

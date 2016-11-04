@@ -218,16 +218,26 @@ a:hover {
   list-style-type: none;
   text-align: left;
   background: lightgrey;
-  display: flex;
-  flex-wrap: wrap;
 }
-/* line 22, ../sass/sections/_services.scss */
+@media only screen and (min-width: 45.71429em) {
+  /* line 12, ../sass/sections/_services.scss */
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+/* line 25, ../sass/sections/_services.scss */
 .services__item {
-  width: 50%;
   display: inline-block;
   text-align: left;
 }
-/* line 27, ../sass/sections/_services.scss */
+@media only screen and (min-width: 45.71429em) {
+  /* line 25, ../sass/sections/_services.scss */
+  .services__item {
+    width: 50%;
+  }
+}
+/* line 33, ../sass/sections/_services.scss */
 .services__item i {
   float: left;
   width: 15%;
@@ -237,11 +247,11 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 36, ../sass/sections/_services.scss */
+/* line 42, ../sass/sections/_services.scss */
 .services__item i:before {
   font-size: 30px;
 }
-/* line 41, ../sass/sections/_services.scss */
+/* line 47, ../sass/sections/_services.scss */
 .services__item--content {
   width: 85%;
   float: right;
@@ -325,26 +335,20 @@ body {
   height: 100vh;
 }
 
-@media only screen and (max-width: 45.71429em) {
-  /* line 26, ../sass/_page.scss */
-  .section {
-    height: 50vh;
-  }
-}
 @media only screen and (min-width: 45.71429em) {
   /* line 26, ../sass/_page.scss */
   .section {
     position: relative;
   }
 }
-/* line 37, ../sass/_page.scss */
+/* line 32, ../sass/_page.scss */
 .section__half {
   display: inline-block;
   float: left;
   width: 50%;
 }
 
-/* line 48, ../sass/_page.scss */
+/* line 43, ../sass/_page.scss */
 .button {
   border-radius: 2px;
   font-size: 16px;
@@ -357,7 +361,7 @@ body {
   transition: visibility 0s, opacity 0.5s linear;
   height: auto;
 }
-/* line 60, ../sass/_page.scss */
+/* line 55, ../sass/_page.scss */
 .button__isClicked {
   overflow: hidden;
   height: 0;
@@ -365,24 +369,24 @@ body {
   transition: all 0.5s ease 0.25s;
 }
 
-/* line 71, ../sass/_page.scss */
+/* line 66, ../sass/_page.scss */
 .article {
   height: 0;
   transition: all 0.5s ease 0.25s;
 }
-/* line 78, ../sass/_page.scss */
+/* line 73, ../sass/_page.scss */
 .article__isVisible {
   height: auto;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-/* line 88, ../sass/_page.scss */
+/* line 83, ../sass/_page.scss */
 .primary-video {
   padding: 0;
   margin-bottom: 20px;
 }
-/* line 92, ../sass/_page.scss */
+/* line 87, ../sass/_page.scss */
 .primary-video > .column {
   padding: 0;
 }

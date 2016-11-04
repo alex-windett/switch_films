@@ -16,13 +16,19 @@ $image-path: '../images/';
   list-style-type: none;
   text-align: left;
   background: lightgrey;
-  display: flex;
-  flex-wrap: wrap;
+
+  @media #{$medium-up} {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
-    width: 50%;
     display: inline-block;
     text-align: left;
+
+    @media #{$medium-up} {
+        width: 50%;
+    }
 
     i {
       float: left;
