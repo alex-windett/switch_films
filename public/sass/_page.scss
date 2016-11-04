@@ -1,17 +1,10 @@
 @import "util";
-@import "tabs";
-@import "iframe";
+@import "./sections/__sections";
 
 .logo {
   display: block;
   z-index: 99999999;
   margin: 0 auto 20px;
-
-  @media #{$medium-up} {
-    @include centeralised();
-    margin: 0 auto -200px;
-    left: 45%;
-  }
 }
 
 body {
@@ -27,7 +20,7 @@ body {
 // Sections
 // ****************************************
 .section {
-
+ 
   @media #{$small-only} {
     height: 50vh;
   }

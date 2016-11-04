@@ -1,5 +1,5 @@
 @mixin centeralised() {
-  text-align: center;
+  // text-align: center;
 
   @media #{$medium-up} {
     position: absolute;

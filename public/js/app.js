@@ -32,13 +32,13 @@ $(document).ready(function() {
     data.forEach( (d, i) => {
       if ( data[0].tags.filter(filterByTagName) ) {
         const video = data[0];
-        const embedHTML = '<div class="image__wrapper column"><div class="iframe">' + video.embed.html + '</div></div>';
+        const embedHTML =
+        `<div class="image__wrapper column">
+          <div class="iframe">${video.embed.html}</div>
+          <p>${video.name}</p>
+        </div>`;
 
-        if ( i === 0) {
-          $('.primary-video').append(embedHTML);
-        }
-
-        if ( i >=1 && i <= 4) {
+        if ( i <= 4) {
           $('.video-row').append(embedHTML);
         }
       }
