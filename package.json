@@ -15,7 +15,7 @@
     "gulp": "^3.9.1",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.2.0"
+    "gulp-sourcemaps": "^2.2.0",
     "express": "~4.8.6",
     "express-handlebars": "^3.0.0",
     "hbs": "~2.7.0",
