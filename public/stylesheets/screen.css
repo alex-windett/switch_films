@@ -204,6 +204,12 @@ a:hover {
   height: 100%;
 }
 
+/* line 19, ../sass/sections/_iframe.scss */
+.video-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 /* line 12, ../sass/sections/_services.scss */
 .services {
   margin: 0;
@@ -280,6 +286,21 @@ ul.tabs {
 /* line 36, ../sass/sections/_tabs.scss */
 .about-us {
   background: white;
+}
+
+/* line 1, ../sass/sections/_contact.scss */
+.contact-details {
+  width: 35%;
+  margin: 40px auto 0;
+}
+/* line 9, ../sass/sections/_contact.scss */
+.contact-details li + .contact-details li {
+  margin-top: 20px;
+}
+/* line 14, ../sass/sections/_contact.scss */
+.contact-details [class^="icon-"] {
+  font-size: 30px;
+  margin-right: 20px;
 }
 
 /* line 4, ../sass/_page.scss */

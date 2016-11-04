@@ -35,7 +35,7 @@ $(document).ready(function() {
         const embedHTML =
         `<div class="image__wrapper column">
           <div class="iframe">${video.embed.html}</div>
-          <p>${video.name}</p>
+          <p class="video-title">${video.name}</p>
         </div>`;
 
         if ( i <= 4) {
