@@ -6,7 +6,7 @@ $(document).ready(function() {
   const tagToFilterBy = 'marathon';
 
   $('.section').click(function() {
-    $('body').toggleClass('isZoomed')
+    // $('body').toggleClass('isZoomed')
     $(this).find('.button').toggleClass('button__isClicked');
     $(this).find('.article').toggleClass('article__isVisible');
   })
