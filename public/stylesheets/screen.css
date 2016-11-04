@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Alte Haas Bold";
+  src: url("../fontsaltehaasgroteskbold-webfont.eot");
+  src: url("../fontsaltehaasgroteskbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fontsaltehaasgroteskbold-webfont.woff") format("woff"), url("../fontsaltehaasgroteskbold-webfont.woff2") format("woff2"), url("../fontsaltehaasgroteskbold-webfont.ttf") format("truetype"), url("../fontsaltehaasgroteskbold-webfont.svg#Alte Haas Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alte Haas Regular";
+  src: url("../fontsaltehaasgroteskregular-webfont.eot");
+  src: url("../fontsaltehaasgroteskregular-webfont.eot?#iefix") format("embedded-opentype"), url("../fontsaltehaasgroteskregular-webfont.woff") format("woff"), url("../fontsaltehaasgroteskregular-webfont.woff2") format("woff2"), url("../fontsaltehaasgroteskregular-webfont.ttf") format("truetype"), url("../fontsaltehaasgroteskregular-webfont.svg#Alte Haas Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 31, ../sass/_typography.scss */
+* {
+  font-family: 'Alte House Bold', serif;
+}
+
 /* line 11, ../sass/_util.scss */
 .centeralised {
   text-align: center;
@@ -158,19 +177,19 @@ body {
   padding: 0;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 9, ../sass/screen.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 a,
 button {
   background-color: transparent !important;
   color: inherit !important;
   outline: none;
 }
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 a:hover,
 button:hover {
   background-color: transparent !important;
