@@ -122,8 +122,8 @@ h3 {
 
 /* line 92, ../sass/_typography.scss */
 h4 {
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /* line 97, ../sass/_typography.scss */
@@ -138,9 +138,10 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
+  font-family: 'Alte Haas Bold', serif;
 }
 
-/* line 109, ../sass/_typography.scss */
+/* line 110, ../sass/_typography.scss */
 h1,
 h2,
 h3,
@@ -149,13 +150,18 @@ p {
   color: black;
 }
 
-/* line 117, ../sass/_typography.scss */
+/* line 118, ../sass/_typography.scss */
+p {
+  font-family: 'Alte Haas Regular', serif;
+}
+
+/* line 122, ../sass/_typography.scss */
 a {
   font-size: inherit;
   color: inherit;
   text-decoration: underline;
 }
-/* line 122, ../sass/_typography.scss */
+/* line 127, ../sass/_typography.scss */
 a:hover {
   color: #4d4d4d;
 }
@@ -174,6 +180,11 @@ a:hover {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/* line 21, ../sass/_util.scss */
+.text-center {
+  text-align: center;
 }
 
 /* line 4, ../sass/sections/_iframe.scss */
@@ -200,21 +211,33 @@ a:hover {
   padding: 20px;
   list-style-type: none;
   text-align: left;
-  column-count: 2;
   background: lightgrey;
+  display: flex;
+  flex-wrap: wrap;
 }
-/* line 21, ../sass/sections/_services.scss */
+/* line 22, ../sass/sections/_services.scss */
 .services__item {
+  width: 50%;
   display: inline-block;
   text-align: left;
 }
-/* line 25, ../sass/sections/_services.scss */
+/* line 27, ../sass/sections/_services.scss */
 .services__item i {
   float: left;
+  width: 15%;
+  position: relative;
+  top: 6px;
+  left: -8px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-/* line 29, ../sass/sections/_services.scss */
+/* line 36, ../sass/sections/_services.scss */
+.services__item i:before {
+  font-size: 30px;
+}
+/* line 41, ../sass/sections/_services.scss */
 .services__item--content {
-  width: 90%;
+  width: 85%;
   float: right;
 }
 
@@ -343,19 +366,14 @@ body {
   padding: 0;
 }
 
-/* line 9, ../sass/screen.scss */
-.text-center {
-  text-align: center;
-}
-
-/* line 19, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
 a,
 button {
   background-color: transparent !important;
   color: inherit !important;
   outline: none;
 }
-/* line 24, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 a:hover,
 button:hover {
   background-color: transparent !important;
