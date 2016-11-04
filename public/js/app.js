@@ -12,7 +12,7 @@ $(document).ready(function() {
   })
 
   // SET UP TAGS
-  $('ul.tabs li').click(function(){
+  $('.tab-link').click(function(){
     var tab_id = $(this).attr('data-tab');
 
     $('ul.tabs li').removeClass('current');

@@ -1,8 +1,11 @@
 .contact-details {
 
-  // background: white;
-  width: 35%;
+  width: 80%;
   margin: 40px auto 0;
+
+  @media #{$medium-up} {
+      width: 40%;
+  }
 
   li {
 

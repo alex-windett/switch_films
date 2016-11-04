@@ -24,6 +24,9 @@ body {
 // Sections
 // ****************************************
 .section {
+  @media #{$small-only} {
+    min-height: 150px;
+  }
 
   @media #{$medium-up} {
     position: relative;
