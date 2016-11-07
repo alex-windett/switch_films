@@ -33,9 +33,18 @@ $(document).ready(function() {
         const video = data[0];
         const embedHTML =
         `<div class="image__wrapper column">
-          <div class="iframe">${video.embed.html}</div>
-          <p class="video-title">${video.name}</p>
-        </div>`;
+          <a href="#1" data-modal-id="video-${i}" class="modal__trigger">
+            <img src="${video.pictures.sizes[5].link}"/>
+            <p class="video-title">${video.name}</p>
+          </a>
+        </div>
+        <section class="modal" id="video-${i}">
+          <div class="modal__wrapper">
+            <div class="modal__content">
+              <div class="iframe">${video.embed.html}</div>
+            </div>
+          </div>
+        </section>`;
 
         if ( i <= 4) {
           $('.video-row').append(embedHTML);
@@ -47,6 +56,17 @@ $(document).ready(function() {
   $.get(getEmbeddableVideos)
     .done(function(data) {
       appendVideosToGrid(data.data);
+      $('.modal__trigger').on( 'click', function(ev) {
+        ev.preventDefault();
+        $('.overlay').addClass('overlay__active');
+        const modal = $(this).attr('data-modal-id');
+        $(`#${modal}`).addClass('modal__active');
+      })
+
+      $('.overlay').click(function(ev) {
+        $(this).removeClass('overlay__active');
+        $('.modal').removeClass('modal__active')
+      })
     })
     .fail(function(data) {
       console.log(data, ' fail')
