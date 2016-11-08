@@ -63,9 +63,8 @@ $(document).ready(function() {
         $(`#${modal}`).addClass('modal__active');
       })
 
-      $('.overlay').click(function(ev) {
-        $(this).removeClass('overlay__active');
-        $('.modal').removeClass('modal__active')
+      $('.modal:not(.modal__content)').on('click', function() {
+        $('.modal').removeClass('modal__active');
       })
     })
     .fail(function(data) {
