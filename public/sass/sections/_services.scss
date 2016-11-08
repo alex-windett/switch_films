@@ -1,10 +1,10 @@
 $services: (
-  'cinema',
-  'design',
-  'timelapse',
-  'aerial',
-  'animation',
-  'live'
+'cinema',
+'design',
+'timelapse',
+'aerial',
+'animation',
+'live'
 );
 
 $image-path: '../images/';
@@ -29,17 +29,22 @@ $image-path: '../images/';
     padding-right: 20px;
 
     @media #{$medium-up} {
-        width: 50%;
+      width: 50%;
     }
 
     i {
       float: left;
       width: 15%;
       position: relative;
-      top: 6px;
-      left: -19px;
+      top: -1px;
+      left: -28px;
       padding-left: 10px;
       padding-right: 10px;
+
+      @media #{$medium-up} {
+        top: 6px;
+        left: -19px;
+      }
 
       &:before {
         font-size: 30px;
