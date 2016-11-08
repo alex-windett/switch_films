@@ -14,8 +14,13 @@
 
   &__wrapper {
     background: white;
-    width: 50%;
-    margin: 2% auto;
+    width: 90%;
+    margin: 50% auto;
+
+    @media #{$medium-up} {
+      width: 50%;
+      margin: 2% auto;
+    }
   }
 
   &__content {
