@@ -11,10 +11,11 @@
  max-width: 100rem;
 }
 
-.main {
+.body_wrap {
   background: url('../images/home-background.jpeg') no-repeat;
   background-size: cover;
   background-position: bottom right;
+  min-height: 100%;
 }
 
 // ****************************************
@@ -66,7 +67,7 @@
 .article {
   // overflow: hidden;
   // opacity: 0;
-  height: 0;
+  // height: 0;
   transition: all 0.5s ease 0.25s;
 
 
