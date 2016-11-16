@@ -3,7 +3,9 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var basicAuth = require('basic-auth');
+
+var bodyParser = require('body-parser')
 
 var routes = require('./routes/index');
 
@@ -21,7 +23,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+// Setting up basic authentication middleware
+var auth = function (req, res, next) {
+  function unauthorized(res) {
+    res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    return res.send(401);
+  };
+
+  var user = basicAuth(req);
+
+  if (!user || !user.name || !user.pass) {
+    return unauthorized(res);
+  };
+
+  if (user.name === process.env.USERNAME && user.pass === process.env.USER_PASSWORD ) {
+    return next();
+  } else {
+    return unauthorized(res);
+  };
+};
+
+app.use('/', auth, routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
