@@ -10,6 +10,7 @@ var basicAuth = require('basic-auth');
 var bodyParser = require('body-parser')
 
 var routes = require('./routes/index');
+var auth = require('./auth')
 
 var app = express();
 
@@ -24,26 +25,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Setting up basic authentication middleware
-var auth = function (req, res, next) {
-  function unauthorized(res) {
-    res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-    return res.send(401);
-  };
-
-  var user = basicAuth(req);
-
-  if (!user || !user.name || !user.pass) {
-    return unauthorized(res);
-  };
-
-  if (user.name === process.env.USERNAME && user.pass === process.env.USER_PASSWORD ) {
-    return next();
-  } else {
-    return unauthorized(res);
-  };
-};
 
 app.use('/', auth, routes);
 
